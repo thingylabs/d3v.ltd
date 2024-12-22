@@ -4,6 +4,42 @@
     <title>D3v Ltd</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Add prefetch hints -->
+    <link rel="prefetch" href="/">
+    <link rel="dns-prefetch" href="/">
+    <script>
+        // Parse reload interval from query string, default to 5000ms
+        const urlParams = new URLSearchParams(window.location.search);
+        const reloadInterval = parseInt(urlParams.get('reload')) || 5000;
+        
+        // Prefetch function
+        function prefetchPage() {
+            return fetch(window.location.href)
+                .then(response => response.text())
+                .catch(error => console.error('Prefetch failed:', error));
+        }
+
+        // Initialize prefetch on page load
+        let prefetchPromise = null;
+        
+        // Reload function with prefetch
+        function reloadWithPrefetch() {
+            // Start prefetch 2 seconds before reload
+            if (!prefetchPromise && reloadInterval > 2000) {
+                setTimeout(() => {
+                    prefetchPromise = prefetchPage();
+                }, reloadInterval - 2000);
+            }
+            
+            // Schedule the reload
+            setTimeout(() => {
+                window.location.reload();
+            }, reloadInterval);
+        }
+
+        // Start the reload cycle when page loads
+        window.addEventListener('load', reloadWithPrefetch);
+    </script>
     <style>
         html, body {
             height: 100%;
@@ -221,11 +257,13 @@
             color: inherit;
             text-decoration: none;
             font-weight: normal;
-            border-right: 2px solid transparent;
             margin-right: -15px;
-            padding-right: 13px;
-            transition: border-right-color 0.2s ease;
+            padding: 8px 13px 8px 8px;
+            transition: border-color 0.2s ease;
             background-color: #E6F3FF;
+            border: 2px solid #2B5F8F;
+            border-right: none;
+            border-radius: 8px 0 0 8px;
         }
         
         .brand-description:hover {
