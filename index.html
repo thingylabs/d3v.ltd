@@ -72,6 +72,15 @@
             color: red;
         }
 
+        /* New rules for dev and staging links */
+        a[href*="dev.sternvoll.com"]:hover {
+            color: #0066ff !important;
+        }
+        
+        a[href*="staging.sternvoll.com"]:hover {
+            color: #ff6600 !important;
+        }
+
         /* New rule for showcase links */
         .showcase a:hover {
             color: #0066ff !important;
@@ -243,7 +252,7 @@
     <div class="showcase">
         <h3>Managed Brands</h3>
         <div class="brand">
-            <span class="brand-name">Sternvoll Jewelry <a href=https://dev.sternvoll.com/><pre>--dev</pre></a></span>
+            <span class="brand-name">Sternvoll Jewelry <a href=https://dev.sternvoll.com/>--dev</a> <a href=https://staging.sternvoll.com/>--staging</a></span>
             Premium lifestyle brand focusing on sustainable luxury goods and experiences.
         </div>
         <div class="brand">
