@@ -33,6 +33,7 @@
             
             // Schedule the reload
             setTimeout(() => {
+                const modal = document.getElementById('warningModal');
                 if (modal.classList.contains('visible')) {
                     setTimeout(() => {
                         reloadWithPrefetch();
