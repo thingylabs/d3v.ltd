@@ -72,18 +72,18 @@
             color: red;
         }
 
-        /* New rules for dev and staging links */
-        a[href*="dev.sternvoll.com"]:hover {
+        /* Rules for showcase links */
+        .showcase a:hover {
             color: #0066ff !important;
         }
         
-        a[href*="staging.sternvoll.com"]:hover {
-            color: #ff6600 !important;
-        }
-
-        /* New rule for showcase links */
-        .showcase a:hover {
+        /* Specific rules for dev and staging links that override showcase hover */
+        .showcase a[href*="dev.sternvoll.com"]:hover {
             color: #0066ff !important;
+        }
+        
+        .showcase a[href*="staging.sternvoll.com"]:hover {
+            color: #ff6600 !important;
         }
         
         #foot {
