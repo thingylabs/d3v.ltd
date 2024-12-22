@@ -176,6 +176,7 @@ http://\___<span class="red">___</span>/<span class="red">_/  /</span>\____/v.lt
         <div class="modal-buttons">
             <button class="btn" onclick="closeModal()">Stay Here</button>
             <button class="btn" onclick="proceedToSite()">Continue to EU Network</button>
+            <button class="btn" onclick="connectViaYgg()">Connect Securely via Ygg</button>
         </div>
     </div>
 </div>
@@ -191,6 +192,10 @@ http://\___<span class="red">___</span>/<span class="red">_/  /</span>\____/v.lt
 
     function proceedToSite() {
         window.location.href = 'https://ygg.thingylabs.io/';
+    }
+
+    function connectViaYgg() {
+        window.location.href = 'https://ygg-only.thingylabs.io/';
     }
 
     // Close modal when clicking outside of it
