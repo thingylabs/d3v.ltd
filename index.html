@@ -202,8 +202,33 @@
 
         .brand-name {
             font-weight: bold;
-            display: block;
+            display: inline-block;
             margin-bottom: 3px;
+            color: inherit;
+        }
+        
+        .brand-name-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .brand-name-link:hover .brand-name {
+            color: #2ecc71;
+        }
+
+        .brand-description {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            font-weight: normal;
+        }
+        
+        .brand-description:hover {
+            color: inherit !important;
+        }
+        
+        .env-link {
+            margin-left: 5px;
         }
 
         .btn {
@@ -252,12 +277,22 @@
     <div class="showcase">
         <h3>Managed Brands</h3>
         <div class="brand">
-            <span class="brand-name">Sternvoll Jewelry <a href=https://dev.sternvoll.com/>--dev</a> <a href=https://staging.sternvoll.com/>--staging</a></span>
-            Premium lifestyle brand focusing on sustainable luxury goods and experiences.
+            <a href="https://www.sternvoll.com/" class="brand-name-link">
+                <span class="brand-name">Sternvoll Jewelry</span>
+            </a>
+            <a href=https://dev.sternvoll.com/ class="env-link">--dev</a>
+            <a href=https://staging.sternvoll.com/ class="env-link">--staging</a>
+            <a href="https://www.sternvoll.com/" class="brand-description">
+                Premium lifestyle brand focusing on sustainable luxury goods and experiences.
+            </a>
         </div>
         <div class="brand">
-            <span class="brand-name">PiXELPiLOT</span>
-            Digital innovation studio specializing in creative technology solutions.
+            <a href="https://www.pixelpilot.com/" class="brand-name-link">
+                <span class="brand-name">PiXELPiLOT</span>
+            </a>
+            <a href="https://www.pixelpilot.com/" class="brand-description">
+                Digital innovation studio specializing in creative technology solutions.
+            </a>
         </div>
     </div>
     <hr style="margin-bottom:5px;">
