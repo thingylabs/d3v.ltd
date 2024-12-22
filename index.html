@@ -72,9 +72,24 @@
             color: red;
         }
 
-        /* New rule for showcase links */
+        /* Override default hover for showcase links */
         .showcase a:hover {
-            color: #0066ff !important;
+            color: inherit; /* Reset default hover behavior */
+        }
+
+        /* Version links (--dev) */
+        .showcase a[href*="dev"]:hover {
+            color: #007FFF !important; /* Warm, activating blue */
+        }
+
+        /* Title links */
+        .showcase .brand-name > a:not([href*="dev"]):hover {
+            color: #2ecc71 !important; /* Same green as border */
+        }
+
+        /* Body text links - no hover effect */
+        .showcase a[style*="font-weight: normal"]:hover {
+            color: inherit !important; /* Keeps the default color */
         }
         
         #foot {
