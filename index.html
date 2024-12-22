@@ -4,62 +4,89 @@
     <title>D3v Ltd</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
         body, pre, a {
             background-color: white;
             color: black;
             font-size: 12px;
             font-family: Verdana, Arial, Helvetica, SunSans-Regular, Sans-Serif;
-            margin: 4px;
-            margin-top: 0px;
             line-height: 13px;
         }
-        pre { font-family: monospace; }
+        
+        pre {
+            font-family: monospace;
+            margin: 0;
+        }
+        
         div {
             float: left;
             width: 255px;
             margin: 0;
             padding: 0;
         }
+        
         #box {
             float: none;
             margin: 0 auto;
         }
+        
         ul {
             font-size: 12px;
             margin: 0;
+            padding-left: 20px;
         }
+        
         ul > li {
             list-style-type: square;
             margin-top: 12px;
         }
+        
         hr {
             border: 0;
             border-top: 1px black solid;
             margin: 15px 0;
         }
-        .red { color: red; }
+        
+        .red {
+            color: red;
+        }
+        
         a {
             font-weight: bold;
             text-decoration: none;
             margin: 0;
         }
-        a:hover { color: red; }
+        
+        a:hover {
+            color: red;
+        }
+        
         #foot {
             font-size: 9px;
             text-align: center;
             margin-top: -5px;
         }
+        
         #impressum {
             position: fixed;
             bottom: 2px;
             right: 4px;
         }
+        
         #impressum > a {
             font-size: 9px;
             font-weight: normal;
         }
 
-        /* Improved Modal styles */
+        /* Modal styles preserved from previous version */
         .modal {
             visibility: hidden;
             opacity: 0;
@@ -86,7 +113,7 @@
             background-color: white;
             border: 1px solid black;
             padding: 15px;
-            width: 255px;  /* Match your site's width */
+            width: 255px;
             position: relative;
             transform: translateY(-20px);
             transition: transform 0.2s;
@@ -153,16 +180,16 @@
 </head>
 <body>
 <div id="box">
-    <pre>                ___
-               / <span class="red">__</span>\<span class="red">___</span>
-              / <span class="red">/      \</span>
-          ___/ <span class="red">/____   /</span> ____
-         /    <span class="red">__</span>/<span class="red">_</span>\<span class="red">/  /</span> /   /
-        /  __<span class="red">/       /</span>\/   /
-       /  /_<span class="red">/____   /</span>     /
-http://\___<span class="red">___</span>/<span class="red">_/  /</span>\____/v.ltd
-          <span class="red">/       /
-          \______/</span></pre>
+    <pre>                  ___
+                 / <span class="red">__</span>\<span class="red">___</span>
+                / <span class="red">/      \</span>
+            ___/ <span class="red">/____   /</span> ____
+           /    <span class="red">__</span>/<span class="red">_</span>\<span class="red">/  /</span> /   /
+          /  __<span class="red">/       /</span>\/   /
+         /  /_<span class="red">/____   /</span>     /
+  http://\___<span class="red">___</span>/<span class="red">_/  /</span>\____/v.ltd
+            <span class="red">/       /
+            \______/</span></pre>
     <hr>
     <ul>
         <li><a href="https://d3v.ltd/">d3v.ltd Bluesky PDS</a><br>
