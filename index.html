@@ -305,6 +305,10 @@
             color: red;
             border-color: red;
         }
+
+        a.no-hover:hover {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -359,12 +363,12 @@
     
     <ul>
         <li><a href="https://d3v.ltd/xrpc/_health" target="_blank">D3v Bluesky Node</a><br>
-            <a href="https://d3v.ltd/xrpc/_health" target="_blank" class="brand-description">
+            <a href="https://d3v.ltd/xrpc/_health" target="_blank" class="no-hover">
                 Our Bluesky instance. It might not be connectable with Yggdrasil yet.
             </a>
         </li>
         <li><a href="#" onclick="showModal(); return false;">Thingylabs Yggdrasil Node</a><br>
-            <a href="https://d3v.ltd/xrpc/_health" target="_blank" class="brand-description">
+            <a href="https://d3v.ltd/xrpc/_health" target="_blank" class="no-hover">
                 A German Yggdrasil Network node run by our friends at Thingylabs.
             </a>
         </li>
