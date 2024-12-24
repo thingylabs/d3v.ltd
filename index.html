@@ -361,11 +361,15 @@
     <hr style="margin-bottom:5px;">
     
     <ul>
-        <li><a href="https://d3v.ltd/xrpc/_health">D3v Bluesky Node</a><br>
-            Our Bluesky instance. It might not be connectable with Yggdrasil yet.
+        <li><a href="https://d3v.ltd/xrpc/_health" target="_blank">D3v Bluesky Node</a><br>
+            <a href="https://d3v.ltd/xrpc/_health" target="_blank" class="brand-description">
+                Our Bluesky instance. It might not be connectable with Yggdrasil yet.
+            </a>
         </li>
         <li><a href="#" onclick="showModal(); return false;">Thingylabs Yggdrasil Node</a><br>
-            A German Yggdrasil Network node run by our friends at Thingylabs.
+            <a href="https://d3v.ltd/xrpc/_health" target="_blank" class="brand-description">
+                A German Yggdrasil Network node run by our friends at Thingylabs.
+            </a>
         </li>
     </ul>
     <div id="foot">
@@ -381,7 +385,7 @@
 </div>
 
 <div id="impressum">
-    <a href="http://validator.w3.org/check?uri=https%3A%2F%2Fwww.d3v.ltd%2F">valid html</a>
+    <a href="http://validator.w3.org/check?uri=https%3A%2F%2Fwww.d3v.ltd%2F" target="_blank">valid html</a>
 </div>
 
 <!-- Warning Modal -->
@@ -417,11 +421,11 @@
     }
 
     function proceedToSite() {
-        window.location.href = 'https://ygg.thingylabs.io/';
+        window.open('https://ygg.thingylabs.io/', '_blank');
     }
 
     function connectViaYgg() {
-        window.location.href = 'https://ygg-only.thingylabs.io/';
+        window.open('https://ygg-only.thingylabs.io/', '_blank');
     }
 
     // Close modal when clicking outside
